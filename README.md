@@ -1,5 +1,3 @@
-# RateLimiter
-
 # Rate Limiter using Token Bucket Algorithm
 
 A simple in-memory rate limiter built using Node.js and Express.js.
