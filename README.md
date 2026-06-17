@@ -139,10 +139,10 @@ This script runs programmatic load tests using `autocannon`, verifying that clie
 
 ---
 
-## 💡 Resume Highlights to Mention
+## 📄 License
 
-If you add this project to your resume, here are key impact-oriented bullet points you can use:
-*   **Horizontal Scalability**: Developed a distributed rate limiter in Express utilizing a centralized **Redis** data structure, resolving split-brain enforcement issues for clustered node environments.
-*   **Zero Race-Condition Enforcement**: Implemented **Redis Lua scripts** to execute rate-limiting checks atomically on the Redis database, reducing overhead and eliminating concurrent write-skew anomalies.
-*   **High Availability & Fault Tolerance**: Designed a dynamic failover strategy using **LRU caches** that falls back to in-memory rate limiting in < 1ms when Redis is unavailable, maintaining 100% service availability.
-*   **Observability**: Integrated **Prometheus** metrics exporter tracking allowed vs. blocked traffic rates and Redis connection health, visualizing service analytics in Grafana dashboards.
+This project is licensed under the MIT License.
+
+---
+
+Made with ❤️. Definitely open source and free for anyone who wants to use it!
