@@ -139,10 +139,16 @@ This script runs programmatic load tests using `autocannon`, verifying that clie
 
 ---
 
-## 📄 License
+## 🤝 Contributing
 
-This project is licensed under the MIT License.
+Contributions, issues, and feature requests are welcome. Feel free to open an issue or submit a pull request.
 
 ---
 
-Made with ❤️. Definitely open source and free for anyone who wants to use it!
+## 📄 License
+
+This project is open-source software licensed under the MIT License.
+
+---
+
+Made with love.
