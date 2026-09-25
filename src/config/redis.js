@@ -46,19 +46,24 @@ export function initRedis() {
 
     redisClient = new Redis(config);
 
+    let lastLoggedError = false;
+
     redisClient.on("connect", () => {
         redisConnected = true;
+        lastLoggedError = false;
         logger.info("Connected to Redis successfully.");
     });
 
     redisClient.on("error", (err) => {
         redisConnected = false;
-        logger.error(`Redis Error: ${err.message}`);
+        if (!lastLoggedError) {
+            logger.warn(`Redis unavailable at ${REDIS_HOST}:${REDIS_PORT} (${err.message}). Using in-memory fallback.`);
+            lastLoggedError = true;
+        }
     });
 
     redisClient.on("close", () => {
         redisConnected = false;
-        logger.warn("Redis connection closed.");
     });
 
     // Register Lua Scripts as Redis Commands
